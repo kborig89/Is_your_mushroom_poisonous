@@ -32,11 +32,16 @@ def index():
          df = pd.DataFrame (data, columns = ['cap-shape', 'cap-surface', 'cap-color', 'odor', 'spore-print-color'])
         X_scaler = MinMaxScaler().fit(df)
         test_scaled = X_scaler.transform(df)
-        encoded_predictions = model.predict_classes(test_scaled[:2])
-
-        return render_template('index.html', prediction = encoded_predictions)
+        encoded_predictions= model.predict_classes(test_scaled[])
+        if encoded_predictions[0] == 0:
+            final_prediction = "Likely Poisionous"
+        else: 
+            final_prediction = "Likely Safe"
+        return render_template('index.html', prediction = final_prediction)
     else:
         return render_template('index.html')
+
+
 
 
 @app.route("/manufacturing/<location>")
