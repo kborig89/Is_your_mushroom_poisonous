@@ -39,6 +39,7 @@ def index():
         return render_template('index.html')
 
 
+
 @app.route("/manufacturing/<location>")
 def manufacturing(location):
     """Return the MetaData for a given location."""
@@ -47,7 +48,19 @@ def manufacturing(location):
     cacao_data = jsonify(cacao_table)
     return cacao_data
 
+@app.route("/about")
+def homepage():
+    return render_template("index.html")
 
+@app.route("/Pousinous Test")
+def homepage():
+    return render_template("PousinousTest.html")
+
+@app.route("/Graph1")
+def homepage():
+    return render_template("Graph1.html")
 
 if __name__ == "__main__":
     app.run()
+
+

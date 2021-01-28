@@ -1,83 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Mushroom Classification</title>
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="../static/css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">
+                <span class="d-block d-lg-none">Mushroom Classification Safe to eat or deadly poison?</span>
+                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="../static/assets/img/Mushroom_head.jpg" alt="" /></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Poisonous Test">Poisonous Test</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Graphs">Graphs</a></li>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Chocolate Bar Ratings</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-</head>
-
-<body>
-  <nav class="navbar navbar-expand-lg">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="/">Home</a>
-      </div>
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="/marketplace">Marketplace</a></li>
-          <li><a href="/bean">Bean</a></li>
-          <li><a href="/manufacturing">Manufacturing</a></li>
-          <li><a href="/rawData">Data</a></li>
-          <li><a href="/map">Map</a></li>
-        </ul>
-    </div>
-</nav>
-<br>
-<br>
-<br>
-<main>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12 jumbotron text-center">
-        <img src="https://cdn.shopify.com/s/files/1/0001/0103/t/5/assets/logo.png?v=18177701282721251772" alt="Chocolate Alchemy" width="1000" height="300">
-        <h1>Chocolate Bar Ratings Dashboard</h1>
-        <p>Use the interactive charts below to explore the dataset</p>
-      </div>
-    </div>
-  <h1>Chocolate Bar Ratings Dashboard</h1>
-  <section class="posts">
-    <article class="post">
-      <h3>Welcome entrepreneurs and investors of the chocolate world</h3>
-      <p>Please navigate our website to find information on chocolate <br>
-          The best countries to source raw materials<br>
-          Get to know the most important global manufacturers and what type of beans they use in their manufacturing process<br>
-          Establish if there’s a correlation between the origin of the bean and the quality of the final product<br>
-          Explore the relationship between the “purity” of the chocolate and the quality of the final product<br>
-      </p>
-    <div class="row">
-      <div class="col-md-2">
-        <!-- <div class="well">
-          <h5>Company Country Location</h5>
-          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+                </ul>
+            </div>
+        </nav>
+        <!-- Page Content-->
+        <div class="container-fluid p-0">
+            <!-- About-->
+            <section class="resume-section" id="about">
+                <div class="resume-section-content">
+                    <h1 class="mb-0">
+                      Mushroom
+                        <span class="text-primary">Classification</span>
+                    </h1>
+                    <div class="subheading mb-5">
+                      Safe to eat or deadly poison?
+                    </div>
+                    <p class="lead mb-5">We have Trained a set of Data to predict if the mushroom your identifiying is Poisonous?</p>
+                </div>
+            </section>
+            <div class="row">
+              <div class="col-sm">
+                <a href="Pousinous Test" class="thumbnail">
+                  <h1 class="mb-0">
+                    Test
+                      <span class="text-primary">Your Mushrooms</span>
+                  </h1>
+                  <img src="../static/assets/img/giphy.gif" alt="...">
+                </a>
+              </div>
+              <div class="col-sm">
+                <a href="Graphs" class="thumbnail">
+                  <h1 class="mb-0">
+                    Most Popular
+                      <span class="text-primary">Findings</span>
+                  </h1>
+                  <img src="../static/assets/img/giphy_magic.gif" alt="...">
+                </a>
+              </div>
+            </div>
         </div>
-        <div class="panel panel-primary">
-          <div class="panel-heading">
-            <h3 class="panel-title">Company Country Location</h3>
-          </div>
-          <div id="sample-metadata" class="panel-body"></div>
-        </div> -->
-
-
-        <form action="{{ url_for('index') }}" method="POST">
-          <fieldset>
-              <legend>Input values:</legend>
-              Alcohol:
-              <input name="alcohol" type="number" required>
-              <br>
-              <input type="submit">
-          </fieldset>
-        </form>
-        <h3>Prediction:</h3>
-        <div>{{ prediction }}</div>
-      
-  
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
-  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-  <!-- <script src="../static/js/app.js"></script> -->
-  
-</body>
-
+        <!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="../static/js/scripts.js"></script>
+    </body>
 </html>
