@@ -14,6 +14,7 @@
         <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="../static/css/styles.css" rel="stylesheet" />
+        <script defer src="../static/js/script.js"></script>
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -27,7 +28,7 @@
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#Pousinous Test">Pousinous Test</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#Graphs">Graph's</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#Graphs">Graphs</a></li>
                
                 </ul>
             </div>
@@ -57,71 +58,22 @@
                   <p>Mushroom Classification</p>
                 </div>
                 <div class="container">
-                  <div class="row margin-top-50">
-                    <div class="col-md-2">
-                      <aside class="filters">
-                        <div class="panel panel-default">
-                          <div class="panel-heading"><center>Test</center></div>
-                          <div class="panel-body">
-                            <form>
-                              <div class="form-group">
-                                <ul class="list-group" id="filters">
-                                  <li class="filter list-group-item">
-                                    <!-- Example single danger button -->
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            Cap Shape
-                                        </button>
-                                        <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="b">Bell</a>
-                                        <a class="dropdown-item" href="c">Conical</a>
-                                        <a class="dropdown-item" href="x">Convex</a>
-                                        <a class="dropdown-item" href="f">Flat</a>
-                                        <a class="dropdown-item" href="k">Knobbed</a>
-                                        <a class="dropdown-item" href="s">Sunken</a>
-                                    </div>
-                                  </li>
-                                  <li class="filter list-group-item">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            Cap Surface
-                                        </button>
-                                        <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="f">Fibrous</a>
-                                        <a class="dropdown-item" href="g">Grooves</a>
-                                        <a class="dropdown-item" href="y">Scaly</a>
-                                        <a class="dropdown-item" href="s">Smooth</a>
-                                    </div>
-                                  </li>
-                                  <li class="filter list-group-item">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            Cap Color
-                                        </button>
-                                        <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="n">Brown</a>
-                                        <a class="dropdown-item" href="b">Buff</a>
-                                        <a class="dropdown-item" href="c">Cinnamon</a>
-                                        <a class="dropdown-item" href="g">Gray</a>
-                                        <a class="dropdown-item" href="r">Green</a>
-                                        <a class="dropdown-item" href="p">Pink</a>
-                                        <a class="dropdown-item" href="u">Purple</a>
-                                        <a class="dropdown-item" href="e">Red</a>
-                                        <a class="dropdown-item" href="w">white</a>
-                                        <a class="dropdown-item" href="y">yellow</a>
-                                    </div>
-                                  </li>
-                                  <li class="filter list-group-item">
-                                    <label for="rating">Enter a Rating</label>
-                                    <input class="form-control" id="rating" type="text">
-                                  </li>
-                                </ul>
-                              </div>
-                            </form>
-                          </div>
+                    <div id="question-container" class="hide">
+                        <div id="question">Question</div>
+                        <div id="answer-buttons" class="btn-grid">
+                        <button class="btn">Answer 1</button>
+                        <button class="btn">Answer 2</button>
+                        <button class="btn">Answer 3</button>
+                        <button class="btn">Answer 4</button>
+                        <button class="btn">Answer 5</button>
                         </div>
-                      </aside>
                     </div>
+                    <div class="controls">
+                        <button id="start-btn" class="start-btn btn">Start</button>
+                        <button id="next-btn" class="next-btn btn hide">Next</button>
+                    </div>
+                    </div>                               
+                         
 
         </div>
         <!-- Bootstrap core JS-->
