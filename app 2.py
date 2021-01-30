@@ -21,13 +21,18 @@ def index():
     """Return the homepage."""
     if request.method == 'POST':
        mushroom = request.form['mushroom']
-        data = {'cap-shape':  [, ,]
-            'cap-surface': [,],
-            'cap-color': [, ,
-            'odor': [, ],
-            'spore-print-color': [, ]
-            
+        data = {'cap-shape': ["Answer 1"],
+        'cap-surface': [0],
+        'cap-color': [5],
+        'odor': [5],
+        'spore-print-color': [0],
+        'population': [0]
         }
+
+        cap-shape = request.form['cap-shape']
+    
+
+
 
          df = pd.DataFrame (data, columns = ['cap-shape', 'cap-surface', 'cap-color', 'odor', 'spore-print-color'])
         X_scaler = MinMaxScaler().fit(df)
