@@ -4,20 +4,18 @@ import numpy as np
 from flask import Flask, jsonify, render_template, request
 from keras.models import load_model
 import matplotlib.pyplot as plt
-from sklearn.preprocessing import LabelEncoder
+from sklearn.preprocessing import LabelEncoder, MinMaxScaler
 
 app = Flask(__name__)
 
-# load model
-model = load_model('model/model.h5')
-# summarize model.
-model.summary()
-
-from sklearn.preprocessing import MinMaxScaler
 
 @app.route("/", methods=['GET', 'POST'])
 def index():
-    
+    # load model
+    model = load_model('/model/model.h5')
+    # summarize model.
+    model.summary()
+
     """Return the homepage."""
     if request.method == 'POST':
         mushroom = request.form['mushroom']
@@ -32,7 +30,7 @@ def index():
         df = pd.DataFrame (data, columns = ['cap-shape', 'cap-surface', 'cap-color', 'odor', 'spore-print-color'])
         X_scaler = MinMaxScaler().fit(df)
         test_scaled = X_scaler.transform(df)
-        encoded_predictions= model.predict_classes(test_scaled)
+        encoded_predictions = model.predict_classes(test_scaled)
 
         if encoded_predictions[0] == 0:
             final_prediction = "Likely Poisionous"
