@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Mushroom Classification</title>
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="../static/css/styles.css" rel="stylesheet" />
+        <!-- Test CSS Style -->
+        <link href="../static/css/styles-test.css" rel="stylesheet" />
+        <script defer src="../static/js/script.js"></script>
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">
+                <span class="d-block d-lg-none">Mushroom Classification Safe to eat or deadly poison?</span>
+                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="../static/assets/img/Mushroom_head.jpg" alt="" /></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                  <li class="nav-item"><a class="nav-link" href="about">About</a></li>
+                  <li class="nav-item"><a class="nav-link" href="test">Poisonous Test</a></li>
+                  <li class="nav-item"><a class="nav-link" href="graphs">Graphs</a></li>
+
+                </ul>
+            </div>
+        </nav>
+        <!-- Page Content-->
+        <div class="container-fluid p-0">
+            <!-- About-->
+          <section class="resume-section" id="about">
+              <div class="resume-section-content">
+                  <h1 class="mb-0">
+                    Poisonous
+                      <span class="text-primary">Test</span>
+                  </h1>
+                  <div class="subheading mb-5">
+                    Safe to eat or deadly poison?
+                  </div>
+                 <p class="subheading mb-6">We have Trained a set of Data to predict if the mushroom your identifiying is Safe to Eat.</p>
+
+               {{prediction}}
+               <!-- Test Layout -->
+              <div class="container">
+                <div class="form-group">
+                  <h3>What is the Cap Shape?</h3>
+                  <select name="cap-shape">
+                    <option value="">Cap-Shape</option>
+                    <option value="0">Bell</option>
+                    <option value="1">Conical</option>
+                    <option value="2">Convex</option>
+                    <option value="3">Flat</option>
+                    <option value="4">Sunken</option>
+                    <option value="5">Knobbed</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <h3>Cap Surface feel like?</h3>
+                  <select name="cap-surface">
+                    <option value="">Cap Surface</option>
+                    <option value="0">Fibrous</option>
+                    <option value="1">Grooves</option>
+                    <option value="2">Scaly</option>
+                    <option value="3">Smooth</option>              
+                  </select>
+                </div>
+                <div class="form-group">
+                  <h3>Cap Surface?</h3>
+                  <select name="cap-color">
+                    <option value="">Cap Surface</option>
+                    <option value="0">Brown</option>
+                    <option value="1">Buff</option>
+                    <option value="2">Binnamon</option>
+                    <option value="3">Gray</option>
+                    <option value="4">Green</option>
+                    <option value="5">Pink</option>
+                    <option value="6">Purple</option>
+                    <option value="7">Red</option>
+                    <option value="8">White</option>
+                    <option value="9">Yellow</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <h3>What is Odor Like?</h3>
+                  <select name="odor">
+                    <option value="">Select Odor</option>
+                    <option value="0">Almond</option>
+                    <option value="1">Anise</option>
+                    <option value="2">Creosote</option>
+                    <option value="3">Fishy</option>
+                    <option value="4">Foul</option>
+                    <option value="5">Musty</option>
+                    <option value="6">None</option>
+                    <option value="7">Pungent</option>
+                    <option value="8">Spicy</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <h3>What is the Spore Print Color?</h3>
+                  <select name="spore-print-color">
+                    <option value="">Spore Print Color</option>
+                    <option value="0">Black</option>
+                    <option value="1">Brown</option>
+                    <option value="2">Buff</option>
+                    <option value="3">Chocolate</option>
+                    <option value="4">Green</option>
+                    <option value="5">Chocolate</option>
+                    <option value="6">Purple</option>
+                    <option value="7">White</option>
+                    <option value="8">Yellow</option>
+                  </select>
+                </div>
+                <input type="submit" value="Submit" class="btn" />
+
+              </div>
+            </div>
+            </section>
+        </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="../static/js/scripts.js"></script>
+        <!-- test JS -->
+        <script src="../static/js/script.js"></script>
+    </body>
+</html>
