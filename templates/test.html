@@ -22,7 +22,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
             <a class="navbar-brand js-scroll-trigger" href="#page-top">
                 <span class="d-block d-lg-none">Mushroom Classification Safe to eat or deadly poison?</span>
-                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="../static/assets/img/Mushroom_head.jpg" alt="" /></span>
+                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="../static/assets/img/giphy_magic.gif" alt="" /></span>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -53,7 +53,7 @@
               <div class="container">
                 <div class="form-group">
                   <h3>What is the Cap Shape?</h3>
-                  <select name="cap-shape">
+                  <select name="shape">
                     <option value="">Cap-Shape</option>
                     <option value="0">Bell</option>
                     <option value="1">Conical</option>
@@ -65,7 +65,7 @@
                 </div>
                 <div class="form-group">
                   <h3>Cap Surface feel like?</h3>
-                  <select name="cap-surface">
+                  <select name="surface">
                     <option value="">Cap Surface</option>
                     <option value="0">Fibrous</option>
                     <option value="1">Grooves</option>
@@ -75,7 +75,7 @@
                 </div>
                 <div class="form-group">
                   <h3>Cap Surface?</h3>
-                  <select name="cap-color">
+                  <select name="color">
                     <option value="">Cap Surface</option>
                     <option value="0">Brown</option>
                     <option value="1">Buff</option>
@@ -117,6 +117,18 @@
                     <option value="6">Purple</option>
                     <option value="7">White</option>
                     <option value="8">Yellow</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <h3>What is the Population?</h3>
+                  <select name="spore-print-color">
+                    <option value="">Population</option>
+                    <option value="0">Abundant</option>
+                    <option value="1">Clustered</option>
+                    <option value="2">Numerous</option>
+                    <option value="3">Scattered</option>
+                    <option value="4">Several</option>
+                    <option value="5">Solitary</option>
                   </select>
                 </div>
                 <input type="submit" value="Submit" class="btn" />
