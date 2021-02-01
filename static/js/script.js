@@ -14,12 +14,12 @@ nextButton.addEventListener('click', () => {
 
 function startGame() {
   startButton.classList.add('hide')
-  shuffledQuestions = questions.sort(() => Math.random() - .5)
+  shuffledQuestions = questions.sort()
   currentQuestionIndex = 0
   questionContainerElement.classList.remove('hide')
   setNextQuestion()
 }
-
+ 
 function setNextQuestion() {
   resetState()
   showQuestion(shuffledQuestions[currentQuestionIndex])
@@ -81,53 +81,53 @@ const questions = [
     question: 'What is the Cap Shape?',
     answers: [
 
-      { text: 'Bell', correct: true },
-      { text: 'Conical', correct: true },
-      { text: 'Convex', correct: true },
-      { text: 'Flat', correct: true },
-      { text: 'Sunken', correct: true },
-      { text: 'Knobbed', correct: true }
+      { text: 'Bell', correct: true ,value:"0"},
+      { text: 'Conical', correct: true ,value:"1"},
+      { text: 'Convex', correct: true ,value:"2"},
+      { text: 'Flat', correct: true ,value:"3"},
+      { text: 'Sunken', correct: true ,value:"4"},
+      { text: 'Knobbed', correct: true ,value:"5"}
     ]
   },
   {
     question: 'Cap Surface?',
     answers: [
 
-      { text: 'Fibrous', correct: true },
-      { text: 'Grooves', correct: true },
-      { text: 'Scaly', correct: true },
-      { text: 'Smooth', correct: true }
+      { text: 'Fibrous', correct: true ,value:"0"},
+      { text: 'Grooves', correct: true ,value:"1"},
+      { text: 'Scaly', correct: true ,value:"2"},
+      { text: 'Smooth', correct: true ,value:"3"}
     ]
   },
   {
     question: 'Cap Color?',
     answers: [ 
 
-      { text: 'Brown', correct: true },
-      { text: 'Buff', correct: true },
-      { text: 'Binnamon', correct: true },
-      { text: 'Gray', correct: true },
-      { text: 'Green', correct: true },
-      { text: 'Pink', correct: true },
-      { text: 'Purple', correct: true },
-      { text: 'Red', correct: true },
-      { text: 'White', correct: true },
-      {text: 'Yellow', correct: true }
+      { text: 'Brown', correct: true ,value:"0"},
+      { text: 'Buff', correct: true ,value:"1"},
+      { text: 'Binnamon', correct: true ,value:"2"},
+      { text: 'Gray', correct: true ,value:"3"},
+      { text: 'Green', correct: true ,value:"4"},
+      { text: 'Pink', correct: true ,value:"5"},
+      { text: 'Purple', correct: true ,value:"6"},
+      { text: 'Red', correct: true ,value:"7"},
+      { text: 'White', correct: true ,value:"8"},
+      { text: 'Yellow', correct: true ,value:"9"}
     ]
   },
   {
     question: 'What is Odor Like?',
     answers: [
 
-      { text: 'Almond', correct: true },
-      { text: 'Anise', correct: true },
-      { text: 'Creosote', correct: true },
-      { text: 'Fishy', correct: true },
-      { text: 'Foul', correct: true },
-      { text: 'Musty', correct: true },
-      { text: 'None', correct: true },
-      { text: 'Pungent', correct: true },
-      {text: 'Spicy', correct: true }
+      { text: 'Almond', correct: true ,value:"0"},
+      { text: 'Anise', correct: true ,value:"1"},
+      { text: 'Creosote', correct: true ,value:"2"},
+      { text: 'Fishy', correct: true ,value:"3"},
+      { text: 'Foul', correct: true ,value:"4"},
+      { text: 'Musty', correct: true ,value:"5"},
+      { text: 'None', correct: true ,value:"6"},
+      { text: 'Pungent', correct: true ,value:"7"},
+      { text: 'Spicy', correct: true ,value:"8"}
 
     ]
   },
@@ -135,15 +135,15 @@ const questions = [
     question: 'What is the Spore Print Color?',
     answers: [
 
-      { text: 'Black', correct: true },
-      { text: 'Brown', correct: true },
-      { text: 'Buff', correct: true },
-      { text: 'Chocolate', correct: true },
-      { text: 'Green', correct: true },
-      { text: 'Orange', correct: true },
-      { text: 'Purple', correct: true },
-      { text: 'White', correct: true },
-      {text: 'Yellow', correct: true }
+      { text: 'Black', correct: true ,value:"0"},
+      { text: 'Brown', correct: true ,value:"1"},
+      { text: 'Buff', correct: true ,value:"2"},
+      { text: 'Chocolate', correct: true ,value:"3"},
+      { text: 'Green', correct: true ,value:"4"},
+      { text: 'Orange', correct: true ,value:"5"},
+      { text: 'Purple', correct: true ,value:"6"},
+      { text: 'White', correct: true ,value:"7"},
+      { text: 'Yellow', correct: true ,value:"8"}
     ]
   }
 ]
