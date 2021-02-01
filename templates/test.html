@@ -47,6 +47,7 @@
                     Safe to eat or deadly poison?
                   </div>
                  <p class="subheading mb-6">We have Trained a set of Data to predict if the mushroom your identifiying is Safe to Eat.</p>
+                 <form class="w3-container" action="{{ url_for('test') }}" method="POST">
 
                {{prediction}}
                <!-- Test Layout -->
@@ -79,7 +80,7 @@
                     <option value="">Cap Surface</option>
                     <option value="0">Brown</option>
                     <option value="1">Buff</option>
-                    <option value="2">Binnamon</option>
+                    <option value="2">Cinnamon</option>
                     <option value="3">Gray</option>
                     <option value="4">Green</option>
                     <option value="5">Pink</option>
@@ -121,7 +122,13 @@
                 </div>
                 <input type="submit" value="Submit" class="btn" />
 
+                <div class="w3-row-padding">
+                  <h3>Prediction:</h3>
+                  <div>{{ prediction }}</div>
+                </div>
+
               </div>
+            </form>
             </div>
             </section>
         </div>
