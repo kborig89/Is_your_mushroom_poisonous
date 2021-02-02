@@ -45,9 +45,9 @@ def test():
         test_scaled = X_scaler.transform(df)
         encoded_predictions= deep_learning_model.predict_classes(test_scaled[:2])
         if encoded_predictions[0] == 1:
-            final_prediction = "Likely Poisionous"
+            final_prediction = "Likely Poisionous" 
         else: 
-            final_prediction = "Likely Safe"
+            final_prediction = "Likely Safe" 
         print(final_prediction)
         return render_template('test.html', prediction = final_prediction)
     else:
@@ -57,11 +57,11 @@ def test():
 
 
 @app.route("/graphs")
-def manufacturingMain():
+def graphs():
     return render_template("graphs.html")
 
 @app.route("/about")
-def manufacturingMain():
+def about():
     return render_template("about.html")
 
    
