@@ -3,7 +3,6 @@ import pandas as pd
 import numpy as np
 from flask import Flask, jsonify, render_template, request
 from keras.models import load_model
-import matplotlib.pyplot as plt
 from sklearn.preprocessing import LabelEncoder
 from sklearn.preprocessing import MinMaxScaler
 
