@@ -30,12 +30,12 @@ def test():
         spore_print_color = request.form['spore-print-color']
         population = request.form['population']
 
-        data = {'cap-shape':  [cap_shape],
-                'cap-surface': [cap_surface],
-                'cap-color': [cap_color],
-                'odor': [odor],
-                'spore-print-color': [spore_print_color],
-                'population': [population],
+        data = {'cap-shape':  [2, cap_shape],
+                'cap-surface': [3, cap_surface],
+                'cap-color': [0, cap_color],
+                'odor': [7, odor],
+                'spore-print-color': [0, spore_print_color],
+                'population': [3, population],
                 }
 
 
