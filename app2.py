@@ -60,6 +60,10 @@ def test():
 def manufacturingMain():
     return render_template("graphs.html")
 
+@app.route("/about")
+def manufacturingMain():
+    return render_template("about.html")
+
    
 
 
