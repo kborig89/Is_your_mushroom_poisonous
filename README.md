@@ -10,17 +10,15 @@ Raymond Galan
 # Goals
 Find a problem worth solving, analyzing or visualizing.
 Use ML in the context of technologies learned.
-Libraries used: Scikit-Learn, Pandas, HTML/CSS/Bootstrap, JS, Tableau
-Host application using Heroku
+Libraries used: Scikit-Learn, Pandas, HTML/CSS/Bootstrap, JS, Tableau, Flask
+Host application using Heroku :  https://mushroomteam5.herokuapp.com/
+Data : https://www.kaggle.com/uciml/mushroom-classification
 
 
 
-We have created a website to help identify if a mushroom is poisionous based on the description.
+We have created a website to help identify if a mushroom is poisonous based on the description.
 
-The web page uses machine learning to predict the poisionous nature of mushrooms based on user inputs.
-
-
-
+The web page uses machine learning to predict the poisonous nature of mushrooms based on user inputs in a test format.
 
 
 
