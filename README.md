@@ -2,14 +2,17 @@
 # Machine Learning with Mushrooms
 We have created a website to help identify if a mushroom is poisonous based on the description.
 
+![](images/website.png)
+
 The web page uses a deep learning model to predict the poisonous nature of mushrooms based on user inputs in the format of a test.
 
+![](images/appfunction.gif)
 
 Libraries used: Scikit-Learn, Pandas, HTML/CSS/Bootstrap, JS, Tableau, Flask
 Host application using Heroku :  https://mushroomteam5.herokuapp.com/
 Data : https://www.kaggle.com/uciml/mushroom-classification
 
-
+![](images/tableau.gif)
 
 # KEY
 * Attribute Information: (classes: edible=e0 ,poisonous=p1)
